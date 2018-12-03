@@ -1,0 +1,18 @@
+!!!! Contains settings for using the URL grab script only.
+
+!!!! Note that you will need to customize this if you have your own custom keybinds in
+!!!! XTerm*VT100*translations
+
+!! Print -> URL grab script
+xterm*printAttributes: 0
+xterm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
+xterm*printerAutoClose: true
+!! Otherwise autowrapper lines will be split and long urls that have wrapped will be fudged 
+xterm*printerNewLine: false
+
+!!!!!!
+!! M-u is bound to run the URL grabber script
+!!!!!!
+XTerm*VT100*translations:       #override \
+        Meta<Key>u: print-everything(noFormFeed)
+
