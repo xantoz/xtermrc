@@ -47,7 +47,7 @@ xterm*printerNewLine: false
 !! M-u is bound to run the URL grabber script
 !! Alt-PgUp/PgDn changes font size
 !! M-i does something which I do not quite remember the use case for (remove?)
-!! Shifted middle mouse button copies/pastes to clipboard
+!! Shifted mouse buttons copies/pastes to clipboard
 !! C-S-c and C-S-v copies/pastes to clipboard
 !! TODO: alternative solution which just merges everything (copy to both, paste from both)?
 !!!!!!
