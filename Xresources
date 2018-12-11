@@ -56,6 +56,7 @@ XTerm*printerNewLine: false
 !! M-i does something which I do not quite remember the use case for (remove?)
 !! Shifted mouse buttons copies/pastes to clipboard
 !! C-S-c and C-S-v copies/pastes to clipboard
+!! C-S-n spawns a new xterm already in the current working directory
 !! TODO: alternative solution which just merges everything (copy to both, paste from both)?
 !!!!!!
 XTerm*VT100*translations:       #override \
