@@ -2,6 +2,7 @@ xterm*bellIsUrgent: true
 
 !! sixel fun
 xterm*decTerminalID: 340
+! How many color registers for sixels (still looks limited to 265 colors, though)
 xterm*numColorRegisters: 1024
 
 !! 256 colors please
@@ -29,7 +30,6 @@ XTerm*scrollKey:true
 XTerm*utf8Title: true
 xterm*fontWarnings: 2
 
-! How many color registers for sixels (still looks limited to 265 colors, though)
 
 ! Do not include newline when triple-clicking to select entire line (useful!)
 XTerm*cutNewline: false
