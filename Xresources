@@ -30,6 +30,14 @@ XTerm*scrollKey:true
 XTerm*utf8Title: true
 xterm*fontWarnings: 2
 
+!! allow colors to be redefined?
+XTerm*dynamicColors: true
+
+!! underline settings
+XTerm*VT100.colorULMode: false
+XTerm*VT100.colorBLMode: false
+XTerm*VT100.underLine: true
+
 
 ! Do not include newline when triple-clicking to select entire line (useful!)
 XTerm*cutNewline: false
