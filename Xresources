@@ -1,26 +1,26 @@
-xterm*bellIsUrgent: true
+XTerm*bellIsUrgent: true
 
 !! sixel fun
-xterm*decTerminalID: 340
+XTerm*decTerminalID: 340
 ! How many color registers for sixels (still looks limited to 265 colors, though)
-xterm*numColorRegisters: 1024
+XTerm*numColorRegisters: 1024
 
 !! 256 colors please
-xterm*termName: xterm-256color
+XTerm*termName: xterm-256color
 
 !! xterm unsuckification (fix default behavior w.r.t. 8bit chars etc.)
-xterm*metaSendsEscape: true
-xterm*eightBitInput: false
-xterm*ttyModes: erase ^?
-xterm*backarrowKeyIsErase: true
+XTerm*metaSendsEscape: true
+XTerm*eightBitInput: false
+XTerm*ttyModes: erase ^?
+XTerm*backarrowKeyIsErase: true
 
-xterm*background: black
-xterm*foreground: white
-xterm*jumpScroll: true
-xterm*fastScroll: true
-xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-xterm*answerbackString: bajs
-xterm*showWrapMarks: true
+XTerm*background: black
+XTerm*foreground: white
+XTerm*jumpScroll: true
+XTerm*fastScroll: true
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+XTerm*answerbackString: bajs
+XTerm*showWrapMarks: true
 *VT100.allowWindowOps: true
 *VT100.allowTitleOps: true
 *VT100.allowFontOps: true
@@ -28,7 +28,7 @@ xterm*showWrapMarks: true
 XTerm*scrollTtyOutput:false
 XTerm*scrollKey:true
 XTerm*utf8Title: true
-xterm*fontWarnings: 2
+XTerm*fontWarnings: 2
 
 !! allow colors to be redefined?
 XTerm*dynamicColors: true
@@ -38,17 +38,16 @@ XTerm*VT100.colorULMode: false
 XTerm*VT100.colorBLMode: false
 XTerm*VT100.underLine: true
 
-
 ! Do not include newline when triple-clicking to select entire line (useful!)
 XTerm*cutNewline: false
 
 #ifdef XTERM_URL_COMMANDS
 !! Print -> URL grab script
-xterm*printAttributes: 0
-xterm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
-xterm*printerAutoClose: true
+XTerm*printAttributes: 0
+XTerm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
+XTerm*printerAutoClose: true
 !! Otherwise autowrapper lines will be split and long urls that have wrapped will be fudged 
-xterm*printerNewLine: false
+XTerm*printerNewLine: false
 #endif
 
 !!!!!!

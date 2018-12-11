@@ -4,11 +4,11 @@
 !!!! XTerm*VT100*translations
 
 !! Print -> URL grab script
-xterm*printAttributes: 0
-xterm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
-xterm*printerAutoClose: true
+XTerm*printAttributes: 0
+XTerm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
+XTerm*printerAutoClose: true
 !! Otherwise autowrapper lines will be split and long urls that have wrapped will be fudged 
-xterm*printerNewLine: false
+XTerm*printerNewLine: false
 
 !!!!!!
 !! M-u is bound to run the URL grabber script
