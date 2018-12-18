@@ -33,6 +33,9 @@ XTerm*fontWarnings: 2
 !! allow colors to be redefined?
 XTerm*dynamicColors: true
 
+!! No fullscreening via Alt+Enter or menu. (WM:s can still make xterm fullscreen)
+XTerm*fullscreen: never
+
 !! underline settings
 XTerm*VT100.colorULMode: false
 XTerm*VT100.colorBLMode: false
