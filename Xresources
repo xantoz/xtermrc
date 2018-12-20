@@ -25,6 +25,9 @@ XTerm*showWrapMarks: true
 *VT100.allowTitleOps: true
 *VT100.allowFontOps: true
 
+!! use scroll lock to be able to view backlog in peace
+*VT100.allowScrollLock: true
+
 XTerm*scrollTtyOutput:false
 XTerm*scrollKey:true
 XTerm*utf8Title: true
