@@ -15,7 +15,7 @@ MAXURL=45
 
 cat > "$TEMP_PRINT"
 
-grep --text -Poi "$URL_REGEX" "$TEMP_PRINT" | uniq | tail -n "$MAXURL" > "$TEMP_URLS" || exec sh -c "echo I got plenty of nuttin\\', and nuttin\\'s plenty for me | $DMENU"
+grep --text -Poi "$URL_REGEX" "$TEMP_PRINT" | uniq | tail -n "$MAXURL" > "$TEMP_URLS" || exec bash -c "echo I got plenty of nuttin\\', and nuttin\\'s plenty for me | $DMENU"
 
 URL="$(tac "$TEMP_URLS" | $DMENU -l "$(wc -l < "$TEMP_URLS")")"
 [ $? -eq 0 ] || exit
