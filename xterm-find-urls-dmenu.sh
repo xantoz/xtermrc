@@ -8,7 +8,7 @@ set -o pipefail
 # actually useful sometimes.
 TEMP_URLS='/tmp/urls'
 TEMP_PRINT='/tmp/xtermprint'
-DMENU='dmenu -b'
+DMENU='dmenu -b -fn monospace:size=8'
 
 URL_REGEX='https?:(?:(//)|(\\\\))+[!\w\d:#@%/;$()~_?\+\-=\\\.,&]*'
 MAXURL=45
