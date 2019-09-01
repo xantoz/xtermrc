@@ -5,7 +5,7 @@
 
 !! Print -> URL grab script
 XTerm*printAttributes: 0
-XTerm*printerCommand: /bin/bash ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
+XTerm*printerCommand: /bin/sh ${HOME}/.config/xterm/xterm-find-urls-dmenu.sh XTERM_URL_COMMANDS
 XTerm*printerAutoClose: true
 !! Otherwise autowrapper lines will be split and long urls that have wrapped will be fudged 
 XTerm*printerNewLine: false

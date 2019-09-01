@@ -1,5 +1,4 @@
-#!/bin/bash
-set -o pipefail
+#!/bin/sh
 
 # Fantastically magic unreadable mess
 
@@ -15,17 +14,22 @@ MAXURL=45
 
 cat > "$TEMP_PRINT"
 
-grep --text -Poi "$URL_REGEX" "$TEMP_PRINT" | uniq | tail -n "$MAXURL" > "$TEMP_URLS" || exec bash -c "echo I got plenty of nuttin\\', and nuttin\\'s plenty for me | $DMENU"
+if ! URLS=$(grep --text -Poi "$URL_REGEX" "$TEMP_PRINT"); then
+    echo "I got plenty of nuttin', and nuttin's plenty for me" | $DMENU
+    exit 0
+fi
+
+echo "$URLS" | uniq | tail -n "$MAXURL" > "$TEMP_URLS"
 
 URL="$(tac "$TEMP_URLS" | $DMENU -l "$(wc -l < "$TEMP_URLS")")"
-[ $? -eq 0 ] || exit
+[ $? -eq 0 ] || exit 0
 
-# With the current regex there's no way we'll actually have any single
-# quotes in $URL, so this is actually totally overkill.
+# embrace the jank
 escape()
 {
-    echo "$1" | sed s/\'/\'\\\\\'\'/g
+    echo "$1" | sed -e 's/\\/\\\\/g' -e 's/#/\\#/g'  -e s/\'/\'\\\\\\\\\'\'/g
 }
 
-command="$(for i in "${@/\%URL%/$(escape "$URL")}"; do echo "$i"; done | $DMENU -l "$#")"
+command="$(for i in "$@"; do echo "$i" | sed 's#%URL%#'"$(escape "$URL")"'#'; done | $DMENU -l "$#")"
+[ $? -eq 0 ] || exit 0
 sh -c "$command" &
