@@ -27,7 +27,7 @@ URL="$(tac "$TEMP_URLS" | $DMENU -l "$(wc -l < "$TEMP_URLS")")"
 # embrace the jank
 escape()
 {
-    echo "$1" | sed -e 's/\\/\\\\/g' -e 's/#/\\#/g'  -e s/\'/\'\\\\\\\\\'\'/g
+    echo "$1" | sed -e 's/\\/\\\\/g' -e 's/\&/\\\&/g' -e 's/#/\\#/g'  -e s/\'/\'\\\\\\\\\'\'/g
 }
 
 command="$(for i in "$@"; do echo "$i" | sed 's#%URL%#'"$(escape "$URL")"'#'; done | $DMENU -l "$#")"
