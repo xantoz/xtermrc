@@ -9,7 +9,7 @@ TEMP_URLS='/tmp/urls'
 TEMP_PRINT='/tmp/xtermprint'
 DMENU='dmenu -b -fn monospace:size=8'
 
-URL_REGEX='https?:(?:(//)|(\\\\))+[!\w\d:#@%/;$()~_?\+\-=\\\.,&]*'
+URL_REGEX='https?:(?:(//)|(\\\\))+[!\w\d:#@%/;$()~_?\+\-=\\\.,&'\'']*'
 MAXURL=45
 
 cat > "$TEMP_PRINT"
